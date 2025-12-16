@@ -5,7 +5,7 @@ import tempfile
 app = FastAPI()
 
 # Load Whisper model
-model = whisper.load_model("small")
+model = whisper.load_model("tiny")
 
 @app.post("/stt")
 async def speech_to_text(audio: UploadFile = File(...)):
